@@ -40,7 +40,7 @@ OWNER = getenv("OWNER")
 
 
 
-@app.on_message(filters.command(["المطور", "ايدن","مطور البوت"], ""))
+@app.on_message(filters.command(["المطور", "سلوم","مطور البوت"], ""))
 async def dev(client: Client, message: Message):
      bot_username = client.me.username
      user = await client.get_chat(OWNER_ID)
@@ -54,7 +54,7 @@ async def dev(client: Client, message: Message):
      title = message.chat.title if message.chat.title else message.chat.first_name
      chat_title = f"╭⦿ɴᴀᴍᴇ : {message.from_user.mention} \n│᚜⦿  ᴄʜᴀᴛ ɴᴀᴍᴇ : {title}" if message.from_user else f"╰⦿ ᚐᴄʜᴀᴛ : ɴᴀᴍᴇ: {message.chat.title}"
      try:
-      await client.send_message(username, f"<b></b>\nحـبي في حـد بينـادي عليك\n{chat_title}\n╰⦿ ᚐᴄʜᴀᴛ ɪᴅ : {message.chat.id}",
+      await client.send_message(username, f"<b></b>\nحـبي اكو واحـد يدور عليك\n{chat_title}\n╰⦿ ᚐᴄʜᴀᴛ ɪᴅ : {message.chat.id}",
       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{title}", url=f"{link}")]]))
      except:
         pass
@@ -72,15 +72,15 @@ async def dev(client: Client, message: Message):
 async def left_bot(c,msg):
     link_gr = "@{msg.chat.username}" if msg.chat.username else "private group"
     if msg.left_chat_member.id == app.id:
-        await app.send_message(config.OWNER_ID[0],f"تـم طـرد البـوت مـن جـروب {msg.chat.title} \n الجروب {link_gr}")
+        await app.send_message(config.OWNER_ID[0],f"تـم طـرد البـوت مـن كـروب {msg.chat.title} \n الجروب {link_gr}")
 
 async def stcall(client: Client, message: Message): 
-      Startt = "تـم بـدأ مـحادثـه صـوتيـه ي قـلبي"
+      Startt = "تـم بـدأ مـحادثـه صـوتيـه  قـلبي"
       await message.reply_text(Startt)
 
 @app.on_message(filters.video_chat_ended)
 async def encall(client: Client, message: Message): 
-      Enddd = "تـم إغـلاق المـحادثـه الصـوتيـه ي قـلبي"
+      Enddd = "تـم إغـلاق المـحادثـه الصـوتيـه  قـلبي"
       await message.reply_text(Enddd)
 
 @app.on_message(filters.video_chat_members_invited)
