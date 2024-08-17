@@ -32,6 +32,11 @@
         "value": "",
         "required": true
       },
+      "github": {
+      "description": "Please enter your GitHub token here to install the app on Heroku.",
+      "value": "",
+      "required": true
+        },
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
         "value": "",
