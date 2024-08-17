@@ -92,7 +92,7 @@ async def close_menu(_, query: CallbackQuery):
         await query.answer()
         await query.message.delete()
         umm = await query.message.reply_text(
-            f"Cʟᴏsᴇᴅ ʙʏ : {query.from_user.mention}"
+            f"• تم الاغـلاق بواسطـة : {CallbackQuery.from_user.mention}"
         )
         await asyncio.sleep(7)
         await umm.delete()
